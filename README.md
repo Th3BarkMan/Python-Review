@@ -1,2 +1,3 @@
-#Python Review
-###Reviewing functions and arrays.
+# Python Review
+
+### Reviewing functions and arrays.
