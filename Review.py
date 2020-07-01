@@ -93,6 +93,5 @@ while not done:
             print("Array is empty")
     elif x == 3:
         done = True
-
     else:
-        print("Please.. there are only three options. Please..... D:")
+        print("Invalid Input!")
