@@ -25,16 +25,74 @@ start(1): Return value: 1
 add(1, 2): Return value: 3
 multiply(1, 2, 3):  Output: 9
 
-'''
-def example(x, y, z):
-    pass
+-----------------------------------------------------------------------------------
 
+def outerFunction(x):
+    z = int(input(">> "))
+    def innerFunction(): #add
+        result = x + z
+        print(result)
+    innerFunction()
 
+outerFunction(2)
 
+-----------------------------------------------------------------------------------
 
-#Arrays
+def first(value): #print a value            #
+    print(value)
 
+def second(x):
+    first(x)
 
+second(2)
 
+-----------------------------------------------------------------------------------
 
-#Functions and Arrays
+def add(x, y):              #Calling functions within functions that hold values
+    result = x + y
+    return result
+
+def multiply(x, y):
+    result = x * y
+    return result
+
+def subtract(x,y):
+    result = x - y
+    return result
+
+def bigMath(x, y, z):
+    result = x * y - z
+    print(result)
+
+bigMath(add(1, 2), multiply(2, 5), subtract(6, 2))
+
+-----------------------------------------------------------------------------------
+
+oneDArray = []
+twoDArray = [[]]
+
+def displayArray(array):
+    for i in array:
+        print(i)
+
+done = False
+while not done:
+    displayArray(oneDArray)
+    print("------------------------------")
+    print("[1] Add to array")
+    print("[2] Pop array")
+    print("[3] Quit")
+    x = int(input(">> "))
+    if x == 1:
+        y = input("Enter something: ")
+        oneDArray.append(y)
+    elif x == 2:
+        if len(oneDArray) > 0:
+            oneDArray.pop()
+        else:
+            print("Array is empty")
+    elif x == 3:
+        done = True
+
+    else:
+        print("Please.. there are only three options. Please..... D:")
